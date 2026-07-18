@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const paths = ['sobre', 'serviços', 'endereço', 'contato'];
+const paths = ['sobre', 'serviços', 'endereço', 'contato']
 </script>
 
 <template>
@@ -11,8 +11,14 @@ const paths = ['sobre', 'serviços', 'endereço', 'contato'];
 
       <nav>
         <ul class="flex gap-4 text-white font-medium">
-          <li v-for="(item, index) in paths" :key="index">
-            <NuxtLink :to="`/${item}`" class="hover:text-gray-700 capitalize">{{
+          <li
+            v-for="(item, index) in paths"
+            :key="index"
+          >
+            <NuxtLink
+              :to="`/${item}`"
+              class="hover:text-gray-700 capitalize"
+            >{{
               item
             }}</NuxtLink>
           </li>

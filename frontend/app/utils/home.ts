@@ -33,11 +33,11 @@ export const servicos = [
       'Orientação financeira e estratégica para crescimento do seu negócio.',
     icone: '🎯',
   },
-];
+]
 
 export const diferenciais = [
   { numero: '10+', texto: 'Anos de experiência' },
   { numero: '500+', texto: 'Empresas atendidas' },
   { numero: '100%', texto: 'Digital e acessível' },
   { numero: '24h', texto: 'Resposta em até 24h' },
-];
+]

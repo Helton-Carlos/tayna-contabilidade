@@ -2,7 +2,9 @@
   <div class="hero bg-base-200 min-h-screen">
     <div class="hero-content flex-col lg:flex-row-reverse">
       <div class="text-center lg:text-left">
-        <h1 class="text-5xl font-bold">Área do Cliente</h1>
+        <h1 class="text-5xl font-bold">
+          Área do Cliente
+        </h1>
         <p class="py-6">
           Seja bem-vindo à plataforma digital da Tayná Contabilidade. Acesse sua
           conta para gerenciar guias, documentos e acompanhar a evolução fiscal
@@ -20,10 +22,16 @@
             />
 
             <label class="label">Senha</label>
-            <input type="password" class="input" placeholder="••••••••" />
+            <input
+              type="password"
+              class="input"
+              placeholder="••••••••"
+            />
 
             <div><a class="link link-hover text-sm">Esqueceu a senha?</a></div>
-            <button class="btn btn-primary mt-4">Entrar na Plataforma</button>
+            <button class="btn btn-primary mt-4">
+              Entrar na Plataforma
+            </button>
           </fieldset>
         </div>
       </div>
