@@ -3,5 +3,7 @@ const text = ref<string>('sasa');
 </script>
 
 <template>
-  <p class="p-4">{{ text }}</p>
+  <div>
+    <Hero />
+  </div>
 </template>
