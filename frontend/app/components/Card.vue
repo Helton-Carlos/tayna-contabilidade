@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="card bg-base-100 size-96 shadow-sm">
+  <div class="card bg-base-100 w-full  shadow-sm">
     <figure>
       <img
         :src="image"

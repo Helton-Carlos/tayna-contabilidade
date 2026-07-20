@@ -20,7 +20,6 @@ import { servicos, diferenciais } from '~/utils/home'
           <div
             v-for="(servico, index) in servicos"
             :key="index"
-            class="card bg-base-200 shadow-md hover:shadow-xl transition-shadow"
           >
             <Card
               :title="servico.title"
