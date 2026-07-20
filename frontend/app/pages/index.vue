@@ -32,7 +32,7 @@ import { servicos, diferenciais } from '~/utils/home'
       </div>
     </section>
 
-    <section class="py-16 px-6 bg-primary text-primary-content">
+    <section class="py-16 px-6 bg-purple-700 text-primary-content">
       <div class="max-w-5xl mx-auto">
         <h2 class="text-3xl font-bold text-center mb-12">
           Por que escolher a Tayná Contabilidade?
@@ -100,7 +100,7 @@ import { servicos, diferenciais } from '~/utils/home'
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="https://wa.me/55SEUNUMERO"
-            class="btn btn-primary btn-lg"
+            class="btn bg-purple-700 text-white btn-lg"
           >
             📱 Falar no WhatsApp
           </a>

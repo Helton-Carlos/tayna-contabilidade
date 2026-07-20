@@ -15,7 +15,7 @@
             conta para gerenciar guias, documentos e acompanhar a evolução fiscal
             da sua empresa de forma rápida e segura.
           </p>
-          <button class=" bg-purple-700 px-4 py-2 rounded-lg text-white font-semibold hover:bg-purple-800 :hover:cursor-pointer transition-colors duration-300">
+          <button>
             Entrar na Plataforma
           </button>
         </div>

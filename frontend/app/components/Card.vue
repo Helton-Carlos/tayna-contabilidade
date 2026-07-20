@@ -22,7 +22,7 @@ defineProps<{
         {{ description }}
       </p>
       <div class="card-actions justify-end">
-        <button class="btn btn-primary">
+        <button>
           Ver Detalhes
         </button>
       </div>
