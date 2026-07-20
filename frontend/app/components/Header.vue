@@ -4,7 +4,7 @@ const paths = ['sobre', 'serviços', 'endereço', 'contato']
 
 <template>
   <header class="bg-purple-700 w-full p-8">
-    <div class="flex justify-between">
+    <div class="flex justify-between max-w-6xl mx-auto items-center">
       <h1 class="text-xl text-white font-bold">
         @Tayná <strong>Contabilidade</strong>
       </h1>
