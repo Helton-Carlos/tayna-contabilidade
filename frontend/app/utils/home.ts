@@ -1,37 +1,37 @@
 export const servicos = [
   {
-    titulo: 'Abertura de Empresa',
-    descricao:
+    title: 'Abertura de Empresa',
+    description:
       'MEI, ME, LTDA — orientação completa desde o registro até o alvará.',
-    icone: '🏢',
+    image: 'https://unicontabil.com.br/wp-content/uploads/2025/01/Abertura-de-empresas-1030x688-1.jpg',
   },
   {
-    titulo: 'Contabilidade Mensal',
-    descricao: 'Escrituração, balancetes, DRE e obrigações acessórias em dia.',
-    icone: '📊',
+    title: 'Contabilidade Mensal',
+    description: 'Escrituração, balancetes, DRE e obrigações acessórias em dia.',
+    image: 'https://americaexpert.com/wp-content/uploads/office-with-documents-money-accounts_144627-33575.webp',
   },
   {
-    titulo: 'Imposto de Renda',
-    descricao:
+    title: 'Imposto de Renda',
+    description:
       'Declaração PF e PJ com planejamento tributário para pagar menos.',
-    icone: '📋',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbq5UrcuzMR6YdGA15Wq84sYivno3UsYwIEAuTdCGujZNAkuxD30yzKdnE&s=10',
   },
   {
-    titulo: 'Folha de Pagamento',
-    descricao: 'Admissão, rescisão, férias, eSocial e todas as rotinas de DP.',
-    icone: '👥',
+    title: 'Folha de Pagamento',
+    description: 'Admissão, rescisão, férias, eSocial e todas as rotinas de DP.',
+    image: 'https://sindivarejistacampinas.org.br/wp-content/uploads/2019/02/FOLHA.jpg',
   },
   {
-    titulo: 'Planejamento Tributário',
-    descricao:
+    title: 'Planejamento Tributário',
+    description:
       'Análise do melhor regime fiscal para reduzir a carga tributária.',
-    icone: '💰',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwt8lJgSG2lJkwP65xvttVj8e9q31jcQgbkN8_dPA9BCrrwraNTYkCm7M&s=10',
   },
   {
-    titulo: 'Consultoria Empresarial',
-    descricao:
+    title: 'Consultoria Empresarial',
+    description:
       'Orientação financeira e estratégica para crescimento do seu negócio.',
-    icone: '🎯',
+    image: 'https://vbmc.com.br/wp-content/uploads/2020/12/consultoria-empresarial-o-que-e-tipos-e-interacoes.jpg',
   },
 ]
 

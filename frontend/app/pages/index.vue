@@ -22,15 +22,11 @@ import { servicos, diferenciais } from '~/utils/home'
             :key="index"
             class="card bg-base-200 shadow-md hover:shadow-xl transition-shadow"
           >
-            <div class="card-body">
-              <span class="text-4xl mb-2">{{ servico.icone }}</span>
-              <h3 class="card-title">
-                {{ servico.titulo }}
-              </h3>
-              <p class="text-base-content/70">
-                {{ servico.descricao }}
-              </p>
-            </div>
+            <Card
+              :title="servico.title"
+              :description="servico.description"
+              :image="servico.image"
+            />
           </div>
         </div>
       </div>
@@ -75,15 +71,19 @@ import { servicos, diferenciais } from '~/utils/home'
             que importa: fazer seu negócio crescer.
           </p>
           <div class="flex gap-3">
-            <span class="badge badge-primary badge-lg">CRC Ativo</span>
-            <span class="badge badge-secondary badge-lg">Especialista em Tributação</span>
+            <span class="badge badge-primary badge-lg p-4">CRC Ativo</span>
+            <span class="badge badge-secondary badge-lg p-4">Especialista em Tributação</span>
           </div>
         </div>
         <div class="flex-1 flex justify-center">
           <div
             class="w-64 h-64 rounded-full bg-base-200 flex items-center justify-center"
           >
-            <span class="text-6xl">👩‍💼</span>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHdlOLtGOOAemTFhkuk5TmqECnikz6_gWo1S9h8CULJA&s"
+              alt="Foto de Tayná"
+              class="rounded-full w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
