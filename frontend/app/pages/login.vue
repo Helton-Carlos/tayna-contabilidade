@@ -1,33 +1,70 @@
 <script lang="ts" setup>
-import { reactive, ref } from 'vue'
+import { reactive, ref, toRaw } from 'vue'
+import { useStorage } from '@vueuse/core'
 
 interface IForm {
-  nome?: string
+  name?: string
   email: string
   password: string
+  check?: boolean | undefined
 }
 
 const login = ref<boolean>(true)
-const checkbox = ref<boolean>(false)
+const checkbox = ref<boolean | undefined>(undefined)
+const LOCALSTORAGE = 'user_save'
+
 const form = reactive<IForm>({
-  nome: '',
+  name: '',
   email: '',
   password: '',
+  check: undefined,
 })
 
-async function submit() {
-  if (form.nome || form.email || form.password) {
-    alert('Por favor, preencha todos os campos.')
-  }
-
+function submit() {
   if (!login.value) {
     alert('Por favor, preencha todos os campos.')
+    return
+  }
+
+  if (form.name || form.email || form.password) {
+    useStorage(LOCALSTORAGE, form)
   }
 }
 
 function register() {
   login.value = !login.value
 }
+
+function clearLocalStorage() {
+  localStorage.removeItem(LOCALSTORAGE)
+}
+
+function getLocalStorage() {
+  const user = useStorage(LOCALSTORAGE, form)
+  const { email, password, check } = toRaw(user.value)
+
+  if (check) {
+    form.email = email
+    form.password = password
+    checkbox.value = check
+  }
+  else {
+    clearLocalStorage()
+  }
+}
+
+watch(checkbox, (newQuestion) => {
+  if (newQuestion) {
+    useStorage(LOCALSTORAGE, { ...form, check: checkbox.value })
+  }
+  else {
+    clearLocalStorage()
+  }
+})
+
+onMounted(() => {
+  getLocalStorage()
+})
 </script>
 
 <template>
@@ -46,9 +83,9 @@ function register() {
       >
         <span>Nome Completo</span>
         <input
-          v-model="form.email"
+          v-model="form.name"
           type="text"
-          placeholder="mail@site.com"
+          placeholder="John Souza"
           class="w-full input input-md my-4"
         />
       </label>
@@ -57,7 +94,7 @@ function register() {
         <span>E-mail</span>
         <input
           v-model="form.email"
-          type="text"
+          type="email"
           placeholder="mail@site.com"
           class="w-full input input-md my-4"
         />

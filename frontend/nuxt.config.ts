@@ -1,7 +1,9 @@
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
-
+  modules: [
+    '@vueuse/nuxt',
+  ],
   devtools: { enabled: true },
   css: ['~/assets/css/index.css'], compatibilityDate: '2025-07-15',
   vite: {
