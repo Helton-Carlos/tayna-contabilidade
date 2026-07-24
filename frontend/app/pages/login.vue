@@ -26,8 +26,10 @@ function submit() {
     return
   }
 
-  if (form.name || form.email || form.password) {
+  if (form.email || form.password) {
     useStorage(LOCALSTORAGE, form)
+
+    navigateTo({ name: 'dashboard' })
   }
 }
 
