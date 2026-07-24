@@ -5,11 +5,15 @@
         <h6 class="footer-title">
           Serviços
         </h6>
-        <a class="link link-hover">Abertura de Empresa</a>
-        <a class="link link-hover">Contabilidade Mensal</a>
-        <a class="link link-hover">Imposto de Renda</a>
-        <a class="link link-hover">Folha de Pagamento</a>
+
+        <div class="flex flex-col gap-4">
+          <a class="link link-hover">Abertura de Empresa</a>
+          <a class="link link-hover">Contabilidade Mensal</a>
+          <a class="link link-hover">Imposto de Renda</a>
+          <a class="link link-hover">Folha de Pagamento</a>
+        </div>
       </nav>
+
       <nav>
         <h6 class="footer-title">
           Institucional
@@ -17,16 +21,23 @@
         <NuxtLink
           to="/sobre"
           class="link link-hover"
-        >Sobre nós</NuxtLink>
+        >
+          Sobre nós
+        </NuxtLink>
         <NuxtLink
           to="/contato"
           class="link link-hover"
-        >Contato</NuxtLink>
+        >
+          Contato
+        </NuxtLink>
         <NuxtLink
           to="/endereco"
           class="link link-hover"
-        >Endereço</NuxtLink>
+        >
+          Endereço
+        </NuxtLink>
       </nav>
+
       <nav>
         <h6 class="footer-title">
           Contato
@@ -43,6 +54,7 @@
       </nav>
     </div>
   </footer>
+
   <footer
     class="footer footer-center bg-purple-800 text-primary-content border-t border-neutral-content/10 p-4"
   >
