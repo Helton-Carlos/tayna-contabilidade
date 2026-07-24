@@ -3,11 +3,14 @@ const paths = ['sobre', 'serviços', 'endereço', 'contato']
 </script>
 
 <template>
-  <header class="bg-purple-700 w-full p-8">
+  <header class="bg-purple-700 w-full p-4">
     <div class="flex justify-between max-w-6xl mx-auto items-center">
-      <h1 class="text-xl text-white font-bold">
+      <nuxt-link
+        to="/"
+        class="text-xl text-white font-bold"
+      >
         @Tayná <strong>Contabilidade</strong>
-      </h1>
+      </nuxt-link>
 
       <nav>
         <ul class="flex gap-4 text-white font-medium">
@@ -17,7 +20,7 @@ const paths = ['sobre', 'serviços', 'endereço', 'contato']
           >
             <NuxtLink
               :to="`/${item}`"
-              class="hover:text-gray-700 capitalize"
+              class="hover:text-gray-100 capitalize"
             >{{
               item
             }}</NuxtLink>

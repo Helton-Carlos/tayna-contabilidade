@@ -15,9 +15,12 @@
             conta para gerenciar guias, documentos e acompanhar a evolução fiscal
             da sua empresa de forma rápida e segura.
           </p>
-          <button>
+          <NuxtLink
+            to="/login"
+            class="btn btn-primary"
+          >
             Entrar na Plataforma
-          </button>
+          </NuxtLink>
         </div>
       </div>
     </div>
