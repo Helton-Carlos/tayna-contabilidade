@@ -13,7 +13,7 @@ const paths = ['sobre', 'serviços', 'endereço', 'contato']
       </nuxt-link>
 
       <nav>
-        <ul class="flex gap-4 text-white font-medium">
+        <ul class="flex items-center gap-4 text-white font-medium">
           <li
             v-for="(item, index) in paths"
             :key="index"
@@ -24,6 +24,14 @@ const paths = ['sobre', 'serviços', 'endereço', 'contato']
             >{{
               item
             }}</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink
+              class="btn"
+              to="/login"
+            >
+              Login
+            </NuxtLink>
           </li>
         </ul>
       </nav>
