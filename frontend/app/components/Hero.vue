@@ -1,3 +1,9 @@
+<script setup lang="ts">
+function login() {
+  navigateTo('login')
+}
+</script>
+
 <template>
   <div class="hero bg-base-200 min-h-screen">
     <div
@@ -15,12 +21,9 @@
             conta para gerenciar guias, documentos e acompanhar a evolução fiscal
             da sua empresa de forma rápida e segura.
           </p>
-          <NuxtLink
-            to="/login"
-            class="btn btn-primary"
-          >
+          <button @click="login">
             Entrar na Plataforma
-          </NuxtLink>
+          </button>
         </div>
       </div>
     </div>
