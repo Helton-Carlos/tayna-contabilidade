@@ -10,13 +10,13 @@ function toggleMenu() {
 </script>
 
 <template>
-  <div>
+  <div class="min-h-screen">
     <HeaderDashboard
       @open-menu="toggleMenu"
     />
     <div class="flex">
       <SideBar v-if="menu" />
-      <div class="flex flex-col min-h-screen">
+      <div>
         <slot></slot>
       </div>
     </div>

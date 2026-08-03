@@ -1,8 +1,13 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { servicos } from '~/utils/dashboard'
+import { useUser } from '~/stores/user'
 
 const title = ref<string>('dashboard')
+
+const store = useUser()
+
+const { user } = storeToRefs(store)
 
 definePageMeta({
   layout: 'standard',
@@ -16,7 +21,7 @@ definePageMeta({
         {{ title }}
       </h2>
       <p>
-        Bem-vindo(a) ao nosso sistema de cotabilidade
+        Olá {{ user?.name }}, bem-vindo(a) ao nosso sistema de cotabilidade
       </p>
     </div>
 

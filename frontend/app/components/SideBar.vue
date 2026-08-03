@@ -44,9 +44,12 @@ const menu = [
     </nav>
 
     <div class="mx-auto mt-8">
-      <button>
+      <NuxtLink
+        class="button"
+        to="/login"
+      >
         Sair
-      </button>
+      </NuxtLink>
     </div>
   </aside>
 </template>

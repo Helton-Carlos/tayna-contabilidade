@@ -1,17 +1,14 @@
 <script lang="ts" setup>
 import { reactive, ref, toRaw } from 'vue'
 import { useStorage } from '@vueuse/core'
+import { useUser } from '~/stores/user'
+import type { IForm } from '~/types/form'
 
-interface IForm {
-  name?: string
-  email: string
-  password: string
-  check?: boolean | undefined
-}
-
-const login = ref<boolean>(true)
+const status = ref<boolean>(true)
 const checkbox = ref<boolean | undefined>(undefined)
 const LOCALSTORAGE = 'user_save'
+
+const { login } = useUser()
 
 const form = reactive<IForm>({
   name: '',
@@ -21,20 +18,35 @@ const form = reactive<IForm>({
 })
 
 function submit() {
-  if (!login.value) {
-    alert('Por favor, preencha todos os campos.')
+  if (status.value) {
+    const { name, email, password } = toRaw(form)
+
+    if (!email || !password) {
+      alert('Preencha todos os campos!')
+      return
+    }
+
+    const user = {
+      id: '1',
+      name: name || 'Usuário',
+      email,
+      password,
+    }
+
+    login(user)
+
     return
   }
 
-  if (form.email || form.password) {
+  if (!status.value) {
     useStorage(LOCALSTORAGE, form)
 
-    navigateTo({ name: 'dashboard' })
+    register()
   }
 }
 
 function register() {
-  login.value = !login.value
+  status.value = !status.value
 }
 
 function clearLocalStorage() {
@@ -73,14 +85,14 @@ onMounted(() => {
   <div>
     <form
       class="bg-gray-50 w-95 mx-auto p-4 rounded-lg shadow-md"
-      @submit.prevent="submit"
+      @submit.prevent="submit()"
     >
       <h2 class="text-2xl font-bold mb-6 text-center">
-        {{ login ? "Login" : "Cadastra-se" }} na Plataforma
+        {{ status ? "Login" : "Cadastra-se" }} na Plataforma
       </h2>
 
       <label
-        v-if="!login"
+        v-if="!status"
         class="floating-label"
       >
         <span>Nome Completo</span>
@@ -113,7 +125,7 @@ onMounted(() => {
       </label>
 
       <label
-        v-if="login"
+        v-if="status"
         class="flex items-center gap-2"
       >
         <input
@@ -125,14 +137,14 @@ onMounted(() => {
 
       <div class="flex gap-4 items-center my-4">
         <button type="submit">
-          {{ login ? "Entrar" : "Salvar" }}
+          {{ status ? "Entrar" : "Salvar" }}
         </button>
 
         <p
           class="text-sm text-gray-00 hover:text-purple-700 hover:cursor-pointer hover:underline transition-colors duration-300"
           @click="register"
         >
-          {{ login ? "Quero me cadastrar!" : "Voltar" }}
+          {{ status ? "Quero me cadastrar!" : "Voltar" }}
         </p>
       </div>
     </form>
