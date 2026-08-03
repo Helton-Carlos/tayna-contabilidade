@@ -1,7 +1,7 @@
 <template>
   <footer class="footer bg-purple-700 text-primary-content p-10">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-      <nav>
+      <div>
         <h6 class="footer-title">
           Serviços
         </h6>
@@ -12,33 +12,36 @@
           <a class="link link-hover">Imposto de Renda</a>
           <a class="link link-hover">Folha de Pagamento</a>
         </div>
-      </nav>
+      </div>
 
-      <nav>
+      <div>
         <h6 class="footer-title">
           Institucional
         </h6>
+
         <NuxtLink
           to="/sobre"
           class="link link-hover"
         >
           Sobre nós
         </NuxtLink>
+
         <NuxtLink
           to="/contato"
           class="link link-hover"
         >
           Contato
         </NuxtLink>
+
         <NuxtLink
           to="/endereco"
           class="link link-hover"
         >
           Endereço
         </NuxtLink>
-      </nav>
+      </div>
 
-      <nav>
+      <div>
         <h6 class="footer-title">
           Contato
         </h6>
@@ -51,7 +54,7 @@
           class="link link-hover"
         >E-mail</a>
         <a class="link link-hover">Instagram</a>
-      </nav>
+      </div>
     </div>
   </footer>
 
