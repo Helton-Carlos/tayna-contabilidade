@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { useUser } from '~/stores/user'
+
+const { logout } = useUser()
+
 const menu = [
   {
     path: '/dashboard',
@@ -44,12 +48,12 @@ const menu = [
     </nav>
 
     <div class="mx-auto mt-8">
-      <NuxtLink
-        class="button"
-        to="/login"
+      <button
+        type="button"
+        @click="logout"
       >
         Sair
-      </NuxtLink>
+      </button>
     </div>
   </aside>
 </template>

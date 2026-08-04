@@ -11,6 +11,7 @@ import { servicos, diferenciais } from '~/utils/home'
         <h2 class="text-3xl font-bold text-center mb-4">
           Nossos Serviços
         </h2>
+
         <p class="text-center text-base-content/70 mb-12 max-w-2xl mx-auto">
           Soluções contábeis completas para sua empresa crescer com segurança e
           tranquilidade.
@@ -36,6 +37,7 @@ import { servicos, diferenciais } from '~/utils/home'
         <h2 class="text-3xl font-bold text-center mb-12">
           Por que escolher a Tayná Contabilidade?
         </h2>
+
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div
             v-for="(item, index) in diferenciais"
@@ -93,6 +95,7 @@ import { servicos, diferenciais } from '~/utils/home'
         <h2 class="text-3xl font-bold mb-4">
           Pronto para organizar sua contabilidade?
         </h2>
+
         <p class="text-base-content/70 mb-8">
           Entre em contato e receba uma proposta personalizada para sua empresa.
         </p>
